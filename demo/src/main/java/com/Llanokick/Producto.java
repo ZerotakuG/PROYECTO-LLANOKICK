@@ -60,6 +60,16 @@ public class Producto {
     public String getImagenURL() { return imagenURL; }
     public void setImagenURL(String imagenURL) { this.imagenURL = imagenURL; }
 
+    public String getCategoria() {
+    return switch (categoriaId) {
+            case 1 -> "Nike";
+            case 2 -> "Adidas";
+            case 3 -> "Puma";
+            default -> "Otra";
+        };
+    }
+
+
     @Override
     public String toString() {
         return "Producto{" +

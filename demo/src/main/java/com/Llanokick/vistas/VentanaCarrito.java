@@ -158,7 +158,14 @@ public class VentanaCarrito extends JFrame {
             JOptionPane.showMessageDialog(this, "Tu carrito está vacío 😅");
             return;
         }
-        JOptionPane.showMessageDialog(this, "✅ ¡Compra finalizada!");
+
+        // 🧾 Mostrar la factura
+        new VentanaFactura(carrito, cantidades).setVisible(true);
+
+        // Vaciar carrito después
         vaciarCarrito();
-    }
+    }   
+
+    
+
 }
